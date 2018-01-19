@@ -1,0 +1,16 @@
+# login!
+az login
+
+# firstly - configure your default location and subscription! Makes things much quicker in future
+az configure --defaults location=eastus
+az configure --defaults subscription=<sub id>
+
+# create a resource group for your cognitive services keys to live
+az group create --name free-tier-time
+
+# create Computer Vision free tier API key
+az cognitiveservices account create --resource-group free-tier-time --name compvision --kind ComputerVision --sku F0
+
+# list API keys
+az cognitiveservices account keys list  --name compvision --resource-group free-tier-time
+

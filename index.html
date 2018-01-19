@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Meme Reader</title>
+  </head>
+  <body>
+    <h1>Meme Reader v0.0.0</h1>
+    <p>This page reads the text on a meme and tries to get it right. Memes are a tricky read!</p>
+    <p>NB: please only use meme images that you have consent to use!</p>
+
+    <form method="post">
+      <label>Computer Vision API key:
+        <input id="apiKeyInput" type="password" />
+      </label>
+      <label>Meme Image URL:
+        <input id="memeUrlInput" type="url" value="https://i.imgflip.com/22xj7m.jpg" />
+      </label>
+      <input type="submit" value="Read my meme!" />
+    </form>
+
+    <img width="400" />
+    <p id="resultPara"></p>
+
+    <script src="index.js"></script>
+  </body>
+</html>
